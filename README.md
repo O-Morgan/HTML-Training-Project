@@ -1,4 +1,4 @@
-# HTML Webpage Project Training 
+# HTML Web Page Project Training 
 
 To build this page I will be using inline style formatting which is considered outdated, but it's handy to use as a beginner to grasp some key fundamentals. CSS is now used to style pages which is much more effective with page layouts that are more responsive with mobile devices.    
 
@@ -19,7 +19,7 @@ The head tags are important instructions for the web browser, but anything betwe
 
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset-utf-8" />
-<title>Webssite Project</title>
+<title>Website Project</title>
 </head>
 
 <body>
@@ -32,7 +32,7 @@ The head tags are important instructions for the web browser, but anything betwe
 
 ### The website header
 
-The website header is nested inside a table so that is the first thing to create, this is knows as the parent table and then we have an area to configure a table within which is know as the nested table.
+The website header is nested inside a table so that is the first thing to create, this is knows as the parent table and then we have an area to configure a table within, which is know as the nested table.
 
 ```html
 <body>
@@ -87,3 +87,28 @@ The website header is nested inside a table so that is the first thing to create
 </body>
 ```
 
+## The Callout Area
+
+In this section I'm going to configure the Callout Area below the header. This is also going to be contained within a table. Without using CSS, it is somewhat the only way we can style and layout the page. The callout area is only going to contain the business name and phone number to be contacted on.
+
+To do this, we first create a primary table, then nest the details within a table inside the primary table, as we did before. You could consider the primary table as configuring the area, and the nested table as configuring the space within it. This way, you can display the information within a confined area and have some control over its position and layout.
+
+
+```html
+<table width="100%" height="150" border="0" cellspacing="5" cellpadding="5" bgcolor="#F0F0F0">
+
+    <tr>
+        <td align="center">
+            <table width="708" border="0" cellpadding="1" cellspacing="1">
+               
+                <tr>
+                    <td width="338" align="left"><font face="Verdana, Geneva, sans-serif" color="black" size="5"><strong>MyBusiness</strong> <br />
+                    Website</td> 
+
+                    <td width="291" align="right"><font face="Verdana, Geneva, sans-serif" color="black" size="5"><strong>Call Today</strong> <br />
+                        0121 do one</td>
+
+                </tr>
+
+</table>
+```
