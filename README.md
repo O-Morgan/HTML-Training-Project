@@ -51,7 +51,7 @@ The website header is nested inside a table so that is the first thing to create
 </body>
 ```
 
-#### Now to add the nested header witin the table
+#### Now to add the nested header within the table
 
  The headers now complete, you can now see that theres a table nested within the parent table.   
 
@@ -112,3 +112,47 @@ To do this, we first create a primary table, then nest the details within a tabl
 
 </table>
 ```
+
+## Image Insertion
+
+Again, to insert an image with text below it you have to insert multiple primary tables with a general area configuration setup, then you insert a nested table with more of a fine tuning configuration and associated image/text.
+
+```html
+<table width="100%" height="150" border="0" cellspacing="5" cellpadding="5" bgcolor="white">
+    <tr>
+        <td align="center">
+
+            <table width="600" border="0" cellspacing="1" cellpadding="1">
+                <tr>
+                    <td align="center"><img src="https://wallpapercave.com/wp/wp7199912.jpg" width="980" height="300" /></td>
+                </tr>
+           
+            </table>
+
+
+<table width="100%" height="150" border="0" cellspacing="5" cellpadding="5" bgcolor="white">
+        
+    <tr>
+
+        <td height="72" align="center" valign="top">
+            <table width="730" border="0" cellspacing="1" cellpadding="1">
+                <tr>
+                    <td width="726" align="center">
+                        <font face="Verdana, Geneva, sans-serif" color="black" size="6">
+                            This is my company website <br />
+                            <strong>Dream. Plan. Create.</strong>
+                        </font>
+                    </td>
+                </tr>
+            </table>
+```
+
+### Text Alignment
+
+Text within HTML will appear next to the immediately written text, even if you have written it on another line and in a different place, i.e., not directly below the previous text. So, to get text to appear on the line below, you have to use a line break tag. Without it, the text will appear on the same line.
+
+The ```<br />``` tag should be applied at the end of the text, but before the text you want to appear on a new line below.
+
+If you want spacing between words on the same line, it isn't as simple as just pressing the space bar. You have to use &nbsp;. So, if you wanted four spaces, you would need to add it four times: ```&nbsp;&nbsp;&nbsp;&nbsp```.
+
+For paragraph spacing, which is two lines below the last text, you have to use opening and closing <p> tags: ```<p>text here inside</p>```
