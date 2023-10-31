@@ -1,4 +1,4 @@
-# HTML Web Page Project Training 
+# HTML Web Page Training Project
 
 To build this page I will be using inline style formatting which is considered outdated, but it's handy to use as a beginner to grasp some key fundamentals. CSS is now used to style pages which is much more effective with page layouts that are more responsive with mobile devices.    
 
@@ -115,7 +115,7 @@ To do this, we first create a primary table, then nest the details within a tabl
 
 ## Image Insertion
 
-Again, to insert an image with text below it you have to insert multiple primary tables with a general area configuration setup, then you insert a nested table with more of a fine tuning configuration and associated image/text.
+Again, to insert an image with text below it you have to insert multiple primary tables with a general area configuration setup, then you insert a nested table with more of a fine tuned configuration and associated image/text.
 
 ```html
 <table width="100%" height="150" border="0" cellspacing="5" cellpadding="5" bgcolor="white">
@@ -147,12 +147,54 @@ Again, to insert an image with text below it you have to insert multiple primary
             </table>
 ```
 
-### Text Alignment
+### Text Alignment Tips 
 
-Text within HTML will appear next to the immediately written text, even if you have written it on another line and in a different place, i.e., not directly below the previous text. So, to get text to appear on the line below, you have to use a line break tag. Without it, the text will appear on the same line.
+Text within HTML will appear next to the immediately written text, even if you have written it on another line and in a different place, i.e. directly or indirectly below the previous text. So, to get text to appear on the line below, you have to use a line break tag ```<br />```. Without it, the text will appear on the same line.
 
 The ```<br />``` tag should be applied at the end of the text, but before the text you want to appear on a new line below.
 
-If you want spacing between words on the same line, it isn't as simple as just pressing the space bar. You have to use &nbsp;. So, if you wanted four spaces, you would need to add it four times: ```&nbsp;&nbsp;&nbsp;&nbsp```.
+If you want a spacing between words on the same line, it isn't as simple as just pressing the space bar as thats not recognised either. You have to use ```&nbsp;```. So, if you wanted four spaces, you would need to add it four times: ```&nbsp;&nbsp;&nbsp;&nbsp```.
 
-For paragraph spacing, which is two lines below the last text, you have to use opening and closing <p> tags: ```<p>text here inside</p>```
+For paragraph spacing, which will appear two lines below the last text, you have to use opening and closing ```<p>``` tags: ```<p>text here inside</p>```
+
+
+## Contact Button Creation
+
+The contact button creation is still a primary table with a nested table within. In this setup, the primary table forms the perimeter of the white box. Because the background of the website is white, it may not be visible. Then, I have configured the nested table to be orange, and the text is displayed within it.
+```html
+<!--Primary tabel the orange -->
+<table width="100%" height="75" border="0" cellspacing="5" cellpadding="5" bgcolor="white">
+        <tr>
+            <td height="72" align="center" valign="top">
+                <!--The nested table within containing the text-->
+                <table width="300" height="75" border="0" cellspacing="3" cellpadding="3" bgcolor="#FF9900">
+                    <tr>
+                        <td width="301" align="center">
+                            <font color="white" size="5" face="Verdana, Geneva, sans-serif">
+                                <a href="#">Contact us Today</a><br />
+                            </font>
+                        </td>
+                    </tr>
+                </table>
+```
+
+
+### Submit Button Newsletter Registration 
+
+This button is implemented as a post method, allowing you to submit information, such as your email address, for subscription to future newsletters. The backend hasn't been created yet, but the theory is that I would have a PHP action within this code or outside of it to validate the information before sending it to the backend. 
+
+```html
+</td>
+        </tr>
+        <tr>
+            <!--Straight into button creation for registration to receive the news letter-->
+            <td height="72" align="center" valign="top">
+                <font color="black" size="2" face="Verdana, Geneva, sans-serif"><strong>Register for my Newsletter:</strong></font><br />
+                
+             <!--Send.php wont work as theres no backend configured-->   
+                <form name="contact" method="post" action="send.php">
+                    <input type="text" name="email" />
+                    <input type="submit" name="button" value="submit" />
+                </form>
+            </td>
+```
