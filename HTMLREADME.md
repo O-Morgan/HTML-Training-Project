@@ -8,6 +8,14 @@ So like I've mentioned already, using tables as layout containers has become a t
 
 There'll still be many useful skill learnt from this, such as object insertion, text formatting, form development and basic styling. 
 
+### What the end Product looks like using only html tables.  
+
+![/workspace/HTML-Training-Project/html tables only image.png](<html tables only image.png>)
+
+
+
+
+
   
 ## The first thing is to create the basic html page structure 
 
@@ -96,20 +104,22 @@ To do this, we first create a primary table, then nest the details within a tabl
 
 ```html
 <table width="100%" height="150" border="0" cellspacing="5" cellpadding="5" bgcolor="#F0F0F0">
-
     <tr>
         <td align="center">
             <table width="708" border="0" cellpadding="1" cellspacing="1">
-               
                 <tr>
-                    <td width="338" align="left"><font face="Verdana, Geneva, sans-serif" color="black" size="5"><strong>MyBusiness</strong> <br />
-                    Website</td> 
-
-                    <td width="291" align="right"><font face="Verdana, Geneva, sans-serif" color="black" size="5"><strong>Call Today</strong> <br />
-                        0121 do one</td>
-
+                    <td width="338" align="left">
+                        <font face="Verdana, Geneva, sans-serif" color="black" size="5"><strong>MyBusiness</strong></font><br />
+                        Website
+                    </td> 
+                    <td width="291" align="right">
+                        <font face="Verdana, Geneva, sans-serif" color="black" size="5"><strong>Call Today</strong></font><br />
+                        0121 do one
+                    </td>
                 </tr>
-
+            </table>
+        </td>
+    </tr>
 </table>
 ```
 
@@ -121,19 +131,19 @@ Again, to insert an image with text below it you have to insert multiple primary
 <table width="100%" height="150" border="0" cellspacing="5" cellpadding="5" bgcolor="white">
     <tr>
         <td align="center">
-
             <table width="600" border="0" cellspacing="1" cellpadding="1">
                 <tr>
-                    <td align="center"><img src="https://wallpapercave.com/wp/wp7199912.jpg" width="980" height="300" /></td>
+                    <td align="center">
+                        <img src="https://wallpapercave.com/wp/wp7199912.jpg" width="980" height="300" />
+                    </td>
                 </tr>
-           
             </table>
-
+        </td>
+    </tr>
+</table>
 
 <table width="100%" height="150" border="0" cellspacing="5" cellpadding="5" bgcolor="white">
-        
     <tr>
-
         <td height="72" align="center" valign="top">
             <table width="730" border="0" cellspacing="1" cellpadding="1">
                 <tr>
@@ -145,6 +155,9 @@ Again, to insert an image with text below it you have to insert multiple primary
                     </td>
                 </tr>
             </table>
+        </td>
+    </tr>
+</table>
 ```
 
 ### Text Alignment Tips 
@@ -162,20 +175,23 @@ For paragraph spacing, which will appear two lines below the last text, you have
 
 The contact button creation is still a primary table with a nested table within. In this setup, the primary table forms the perimeter of the white box. Because the background of the website is white, it may not be visible. Then, I have configured the nested table to be orange, and the text is displayed within it.
 ```html
-<!--Primary tabel the orange -->
+<!--Primary tabel the orange area -->
 <table width="100%" height="75" border="0" cellspacing="5" cellpadding="5" bgcolor="white">
-        <tr>
-            <td height="72" align="center" valign="top">
-                <!--The nested table within containing the text-->
-                <table width="300" height="75" border="0" cellspacing="3" cellpadding="3" bgcolor="#FF9900">
-                    <tr>
-                        <td width="301" align="center">
-                            <font color="white" size="5" face="Verdana, Geneva, sans-serif">
-                                <a href="#">Contact us Today</a><br />
-                            </font>
-                        </td>
-                    </tr>
-                </table>
+    <tr>
+        <td height="72" align="center" valign="top">
+            <!--The nested table within containing the text-->
+            <table width="300" height="75" border="0" cellspacing="3" cellpadding="3" bgcolor="#FF9900">
+                <tr>
+                    <td width="301" align="center">
+                        <font color="white" size="5" face="Verdana, Geneva, sans-serif">
+                            <a href="#">Contact us Today</a><br />
+                        </font>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>
 ```
 
 
@@ -184,19 +200,21 @@ The contact button creation is still a primary table with a nested table within.
 This button is implemented as a post method, allowing you to submit information, such as your email address, for subscription to future newsletters. The backend hasn't been created yet, but the theory is that I would have a PHP action within this code or outside of it to validate the information before sending it to the backend. 
 
 ```html
-</td>
-        </tr>
-        <tr>
-            <!--Straight into button creation for registration to receive the news letter-->
-            <td height="72" align="center" valign="top">
-                <font color="black" size="2" face="Verdana, Geneva, sans-serif"><strong>Register for my Newsletter:</strong></font><br />
-                
-             <!--Send.php wont work as theres no backend configured-->   
-                <form name="contact" method="post" action="send.php">
-                    <input type="text" name="email" />
-                    <input type="submit" name="button" value="submit" />
-                </form>
-            </td>
+ </td>
+</tr>
+<tr>
+    <!--Straight into button creation for registration to receive the newsletter-->
+    <td height="72" align="center" valign="top">
+        <font color="black" size="2" face="Verdana, Geneva, sans-serif"><strong>Register for my Newsletter:</strong></font><br />
+
+        <!--Send.php won't work as there's no backend configured-->
+        <form name="contact" method="post" action="send.php">
+            <input type="text" name="email" />
+            <input type="submit" name="button" value="Submit" />
+        </form>
+    </td>
+</tr>
+</table>
 ```
 
 ## Entering Tabular Data
@@ -256,3 +274,22 @@ I have created and configured a primary table with nested tables, each consistin
         </tr>
     </table>
 ```
+
+## Inserting the footer
+
+```html
+<table width="100%" height="60" border="0" cellspacing="5" cellpadding="5" bgcolor="#000000">
+         <tr>
+            <td align="center">
+                <font face="Verdana, Geneva, sans-serif" color="white">
+            Home - About - Services - Clients - Contractor<br />
+            <br />
+            &copy; 2023 by Owen Morgan.</font>
+            </td>
+        </tr>
+</table>                                                                        
+</body>
+</html>
+```
+
+### HTML website creation using only tables complete. 
