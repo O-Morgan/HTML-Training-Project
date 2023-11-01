@@ -198,3 +198,61 @@ This button is implemented as a post method, allowing you to submit information,
                 </form>
             </td>
 ```
+
+## Entering Tabular Data
+
+I have created and configured a primary table with nested tables, each consisting of three columns. In these nested tables, I've included headers and additional text. To make the subtext editable by users, I've used the ```contenteditable="true"``` attribute. The headers remain fixed. The last column contains an unordered list created with the ```<ul>``` and ```<li>``` tags. This example demonstrates different styles and layouts achievable using only HTML and tables."
+
+```html
+<table width="100%" height="236" border="0" cellspacing="5" cellpadding="5" bgcolor="white">
+        <tr>
+            <td height="72" align="center" valign="top">
+                <table width="900" border="1" cellspacing="0" cellpadding="8" bgcolor="#CCCCCC">
+                    <tr>
+                        <td width="268">
+                            <font face="Verdana, Geneva, sans-serif" color="black" size="3">
+                                <strong><u>ABOUT US</u></strong>
+                            </font>
+                        </td>
+                        <td width="268">
+                            <font face="Verdana, Geneva, sans-serif" color="black" size="3">
+                                <strong><u>OUR VISION</u></strong>
+                            </font>
+                        </td>
+                        <td width="290">
+                            <font face="Verdana, Geneva, sans-serif" color="black" size="3">
+                                <strong><u>SERVICES</u></strong>
+                            </font>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <font face="Verdana, Geneva, sans-serif" color="black" size="2" contenteditable="true">
+                                Click here to add your own text and edit me. It's that easy. I'm just a paragraph of text.
+                                Just click "Edit Text" or double-click me to make your changes to the font. Tell a story to let your users get to know you.
+                            </font>
+                        </td>
+                        <td valign="top">
+                            <font face="Verdana, Geneva, sans-serif" color="black" size="2" contenteditable="true">
+                                I'm a paragraph. Click here to add your own text and edit me. It's easy.
+                                Just click "Edit Text" or double-click me to add your own content and make changes to the font. I'm a great place for you to tell a story.
+                            </font>
+                        </td>
+                        <td valign="top">
+                            <font face="Verdana, Geneva, sans-serif" color="black" size="2" contenteditable="true">
+                                <ul>
+                                    <li>Strategy & Organization</li>
+                                    <li>Corporate Development</li>
+                                    <li>Globalization</li>
+                                    <li>Operations Management</li>
+                                    <li>Corporate Finance</li>
+                                    <li>IT Management</li>
+                                </ul>
+                            </font>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+```
