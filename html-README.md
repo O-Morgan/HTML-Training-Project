@@ -8,9 +8,9 @@ So like I've mentioned already, using tables as layout containers has become a t
 
 There'll still be many useful skill learnt from this, such as object insertion, text formatting, form development and basic styling. 
 
-### What the end Product looks like using only html tables.  
+### This is what the end product looks like using html tables only.  
 
-![/workspace/HTML-Training-Project/html tables only image.png](<html tables only image.png>)
+![/workspace/HTML-Training-Project/html tables only image.png](<html-image.png>)
 
 
 
@@ -277,6 +277,9 @@ I have created and configured a primary table with nested tables, each consistin
 
 ## Inserting the footer
 
+A footer can contain a copyright notice, whos the page has been designed by, social media links, contact iformation, an address of the business, links to terms of service, FAQ's and basically any other information that could enhance the viewer experience but also help if they have not had the best experience. 
+
+
 ```html
 <table width="100%" height="60" border="0" cellspacing="5" cellpadding="5" bgcolor="#000000">
          <tr>
@@ -292,4 +295,4 @@ I have created and configured a primary table with nested tables, each consistin
 </html>
 ```
 
-### HTML website creation using only tables complete. 
+### Thats html website creation complete using tables only. 
